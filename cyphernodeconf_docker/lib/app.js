@@ -469,9 +469,11 @@ module.exports = class App {
         }
       },
       otsclient: {
+        networks: ['cyphernodenet'],
         docker: "cyphernode/otsclient:" + this.config.docker_versions['cyphernode/otsclient']
       },
       lightning: {
+        networks: ['cyphernodenet'],
         docker: "cyphernode/clightning:"+this.config.docker_versions['cyphernode/clightning'],
         extra: {
           nodename: this.config.data.lightning_nodename,
@@ -489,7 +491,7 @@ module.exports = class App {
         name: feature.name,
         label: feature.value,
         host: feature.value,
-        networks: ['cyphernodenet'],
+        networks: optional_features_data[feature.value].networks,
         docker: optional_features_data[feature.value].docker
       };
 
