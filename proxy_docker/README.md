@@ -344,7 +344,7 @@ Proxy response:
 ```http
 POST http://cyphernode:8888/spend
 with body...
-{"address":"2N8DcqzfkYi8CkYzvNNS5amoq3SbAcQNXKp","amount":0.00233}
+{"address":"2N8DcqzfkYi8CkYzvNNS5amoq3SbAcQNXKp","amount":0.00233, "conf_target":6}
 ```
 
 Proxy response:
